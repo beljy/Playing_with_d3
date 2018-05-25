@@ -7,5 +7,14 @@
     <p>second one</p>
     <p>one more</p>
     <p>Here is some more that we forgot earlier</p>
+
+    <script type="application/javascript">
+      var paragraphs = document.getElementsByTagName("p");
+      for (var i = 0; i < paragraphs.length; i++) {
+      var paragraph = paragraphs.item(i);
+      paragraph.style.setProperty("color", "white", null);
+    }
+    
+    </script>
   </body>
 </html>
