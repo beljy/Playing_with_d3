@@ -11,13 +11,19 @@
 
     <h1>Pokemon</h1>
     <h2>Pikachu</h2>
-    <div style="background-color: green; width: 129px">attack: 129</div>
-    <div style="background-color: green; width: 190px">defense: 190</div>
-    <div style="background-color: green; width: 250px">regeneration: 250</div>
-    <div style="background-color: green; width: 50px">size: 50</div>
+    <div style="background-color: green; ">attack: 129</div>
+    <div style="background-color: green; ">defense: 190</div>
+    <div style="background-color: green; ">regeneration: 250</div>
+    <div style="background-color: green; ">size: 50</div>
 
     <script type="application/javascript">
       d3.selectAll("p").style("color", "blue");
+
+      var data = [129, 190, 250, 50];
+
+      d3.selectAll("div")
+          .data(data)
+            .style("width", (d) => d + "px");
     </script>
   </body>
 </html>
