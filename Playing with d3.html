@@ -1,6 +1,6 @@
 <html>
   <head>
-    <title>Super cool example</title>
+    <title>Pikachu</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
     <style>
     .pokemon div{
@@ -9,27 +9,31 @@
       color: white;
     }
     </style>
-  </head>
-  <body>
-    <h1>Pokemon</h1>
+    <script type="application/javascript">
+      var data = [129, 190, 250, 50];
 
-    <h2>Pikachu</h2>
+
+    window.onload = () => {
+      let elements = d3.selectAll(".pokemon div")
+                      .data(data);
+
+          elements.style("width", (d) => d + "px");
+
+      }
+    </script>
+
+  </head>
+    <body>
+      <h1>Pokemon</h1>
+        <h2>Pikachu</h2>
 
   <section class="pokemon">
     <div>attack: 129</div>
     <div>defense: 190</div>
     <div>regeneration: 250</div>
     <div>size: 50</div>
+    <div>hidden stat: ??</div>
   </section>
 
-    <script type="application/javascript">
-      d3.selectAll("p").style("color", "blue");
-
-      var data = [129, 190, 250, 50];
-
-      d3.selectAll("div")
-          .data(data)
-            .style("width", (d) => d + "px");
-    </script>
   </body>
 </html>
