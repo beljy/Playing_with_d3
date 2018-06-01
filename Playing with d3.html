@@ -2,19 +2,25 @@
   <head>
     <title>Super cool example</title>
     <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+    .pokemon div{
+      background-color: green;
+      height: 35px;
+      color: white;
+    }
+    </style>
   </head>
   <body>
-    <p>This is a paragraph</p>
-    <p>second one</p>
-    <p>one more</p>
-    <p>Here is some more that we forgot earlier</p>
-
     <h1>Pokemon</h1>
+
     <h2>Pikachu</h2>
-    <div style="background-color: green; ">attack: 129</div>
-    <div style="background-color: green; ">defense: 190</div>
-    <div style="background-color: green; ">regeneration: 250</div>
-    <div style="background-color: green; ">size: 50</div>
+
+  <section class="pokemon">
+    <div>attack: 129</div>
+    <div>defense: 190</div>
+    <div>regeneration: 250</div>
+    <div>size: 50</div>
+  </section>
 
     <script type="application/javascript">
       d3.selectAll("p").style("color", "blue");
