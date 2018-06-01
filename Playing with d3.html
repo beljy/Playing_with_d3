@@ -10,12 +10,7 @@
     <p>Here is some more that we forgot earlier</p>
 
     <script type="application/javascript">
-      var paragraphs = document.getElementsByTagName("p");
-      for (var i = 0; i < paragraphs.length; i++) {
-      var paragraph = paragraphs.item(i);
-      paragraph.style.setProperty("color", "blue", null);
-    }
-
+      d3.selectAll("p").style("color", "blue");
     </script>
   </body>
 </html>
