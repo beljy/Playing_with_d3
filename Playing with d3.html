@@ -2,33 +2,10 @@
   <head>
     <title>Pokemon: Pikachu</title>
     <script src="https://d3js.org/d3.v5.js"></script>
-    <style>
-     .pokemon div {
-       background-color: green;
-       height: 30px;
-       color: black;
-     }
-    </style>
-    <script type="application/javascript">
-    var Pikachu = [["attack", 129],
-                ["defense", 190],
-                ["regeneration", 250],
-                ["size", 50],
-                ["block", 29],
-                ["weaponStrength", 321]];
-
-      window.onload = () => {
-        let elements = d3.select(".pokemon")
-                         .selectAll("div")
-                         .data(Pikachu);
-
-        elements.enter()
-                .append("div")
-                .style("width", (d) => d[1] + "px")
-                .text((d) => d[0] + "_" + d[1]);
-      }
-    </script>
+    <link rel="stylesheet" type="text/css" href="Styles.css">
+    <script src="Pokemon.js"></script>
   </head>
+  
   <body>
     <h1>Pokemon</h1>
 
