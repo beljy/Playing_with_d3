@@ -1,39 +1,39 @@
 <html>
   <head>
-    <title>Pikachu</title>
-    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <title>Pokemon: Pikachu</title>
+    <script src="https://d3js.org/d3.v5.js"></script>
     <style>
-    .pokemon div{
-      background-color: green;
-      height: 35px;
-      color: white;
-    }
+     .pokemon div {
+       background-color: green;
+       height: 30px;
+       color: black;
+     }
     </style>
     <script type="application/javascript">
-      var data = [129, 190, 250, 50];
+    var Pikachu = [["attack", 129],
+                ["defense", 190],
+                ["regeneration", 250],
+                ["size", 50],
+                ["block", 29],
+                ["weaponStrength", 321]];
 
+      window.onload = () => {
+        let elements = d3.select(".pokemon")
+                         .selectAll("div")
+                         .data(Pikachu);
 
-    window.onload = () => {
-      let elements = d3.selectAll(".pokemon div")
-                      .data(data);
-
-          elements.style("width", (d) => d + "px");
-
+        elements.enter()
+                .append("div")
+                .style("width", (d) => d[1] + "px")
+                .text((d) => d[0] + "_" + d[1]);
       }
     </script>
-
   </head>
-    <body>
-      <h1>Pokemon</h1>
-        <h2>Pikachu</h2>
+  <body>
+    <h1>Pokemon</h1>
 
-  <section class="pokemon">
-    <div>attack: 129</div>
-    <div>defense: 190</div>
-    <div>regeneration: 250</div>
-    <div>size: 50</div>
-    <div>hidden stat: ??</div>
-  </section>
-
+    <h2>Pikachu</h2>
+    <section class="pokemon">
+    </section>
   </body>
 </html>
